@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Poppins',sans-serif;
+}
+.nav{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+ /* border-bottom: 2px solid black ; */
+ padding: 0px 70px;
+
+}
+
+.nav-bottom-border{
+    position: absolute;
+    width: 100vw;
+    height: 2px;
+    background-color: black;
+    z-index: 1;
+}
+.logo{
+    width: 120px;
+  /* border: 2px solid yellow; */
+   overflow: hidden;
+    /* font-size: 2.5rem; */
+    text-align: center;
+    font-weight: 900;
+}
+.logo img{
+    position:relative;
+    height: 60px;
+    width: 100px;
+    border-radius: 25px;
+}
+.nav-links{
+    display: flex;
+    gap: 32px;
+   
+}
+.nav-links span a:hover{
+color: rgb(46, 8, 82);
+color: blue;
+}
+.nav-links span a{
+   text-decoration: none;
+   color: #838382;
+  
+   font-size: 16px;
+}
+.nav-link-four{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+.nav-link-four i{
+    margin-top: 8px;
+    color: #828281;
+}
+.nav-link-four:hover i{
+   animation-name:IconRotate  ;
+   animation-duration: .2s;
+   animation-fill-mode: forwards;
+   animation-timing-function: ease-in;
+    
+}
+@keyframes IconRotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+.nav-button{
+    position: relative;
+    width:100px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    height: 70%;
+    text-align: center;
+    padding-top: 18px;
+    border-radius: 5px;
+}
+
+.link4Box{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    text-align: center;
+    padding-left: 43px;
+   gap: 15px;
+    width: 149px;
+    height: 140px;
+    border: 2px solid black;
+    margin-top: 500px;
+    margin-left: -18px;
+    transition: margin .2s ease-in;
+    transition: visibilit .2s ease-in;
+    /* visibility: hidden; */
+    opacity: 0;
+    z-index: 10;
+}
+.nav-link-four:hover .link4Box{
+    margin-top: 200px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 10;
+}
+.buttons{
+position: absolute;
+    display: flex;
+    gap: 30px;
+}
+.bars-button-div{
+    position: absolute;
+    visibility: hidden;
+    margin-right: -50vw;
+}
+.nav-bars-button{
+ 
+    font-size: 50px;
+   
+}
+@media screen and (max-width:800px) {
+    .nav{
+          
+        padding: 0px 10px;
+        height: 60px;
+    }
+    .logo{
+        font-size: 20px;
+    }
+    .logo img{
+        width: 80px;
+        height: 40px;
+    }
+    .buttons{
+        position: relative;
+    }
+    .nav-links{
+        visibility: hidden;
+        position: absolute;
+        margin-top: -80vh;
+    }
+    .nav-button{
+        height: 60%;
+       
+    }
+    .bars-button-div{
+        position: relative;
+        visibility: visible;
+        margin-right: 0px;
+    }
+    .side-bar{
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 105vw;
+        width: 1px;
+        height:80vh;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 30px;
+        background-color: rgb(0, 0, 0, );
+        transition: margin-left .5s ease-in-out;
+    }
+   .sec1-first-left{
+    font-size: 1.5rem;
+   }
+   .sec1-first-right{
+    width: 80vw;
+   }
+   .sec1-first-right img{
+    width: 150px;
+    height: 150px;
+    
+}
+}
+.side-bar{
+
+margin-left: 100vw;
+position: absolute;
+margin-top: -100vh;
+
+}
+.bar1{
+    
+    margin-left: 100px;
+   width: 80vh;
+
+}
+
+.side-bar a{
+    text-decoration: none;
+    color:#828281;
+}
+
+.hide-sidebar{
+    position: absolute;
+    margin-top: -39vh;
+    visibility: hidden;
+}
+
+.first-sec{
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.sec1-first-left{
+    margin-top: 100px;
+   
+    flex:50;
+    /* border: 2px solid red; */
+    font-family:'Poppins',sans-serif;
+    font-size: 2.5rem;
+}
+
+.sec1-first-right{
+  flex: 50;
+  display: flex;
+  
+  justify-content: center;
+  /* border: 2px solid red; */
+  /* border: 2px solid red; */
+}
+.sec1-first-right img{
+    width: 500px;
+    height: 450px;
+    object-fit: contain;
+    
+}
+.nam{
+    font-weight: 800;
+    color: rgb(5, 36, 85);
+}
+#element{
+    color:rgb(5, 36, 85);
+}
+
+.about-section{
+   
+    width: 100vw;
+    height: 60vh;
+    /* border: 2px solid red; */
+    margin: 5vh 5vw;
+    overflow:hidden;
+}
+.heading{
+    align-self: flex-start;
+   
+    font-size: x-large;
+}
+.sec2-container{
+    display: flex;
+   
+    width: 100vw;
+position: relative;
+height: 100%;
+}
+.sec2-first-left{
+    margin-top:20px ;
+    flex: 70;
+    margin-right: 120px;
+    /* border: 2px solid red; */
+    font-size: large;
+    line-height: 43px;
+    
+
+}
+.sec2-first-right{
+    flex: 30;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+    /* border: 2px solid red; */
+    /* border-radius: 50%; */
+  
+    
+   
+}
+.sec2-first-right img{
+    position: relative;
+    width: 250px;
+    height:250px ;
+    border-radius: 50%;
+    object-fit: fill;
+   
+}
+
+.skill-section{
+   
+    /* justify-content: center; */
+    margin: 10vh 5vw;
+    flex-wrap: wrap;
+   
+}
+.skill-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.sikll-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: aqua;
+    transition: background-color 1s ease-in-out;
+}
+.sikll-box:hover{
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: rgb(120, 187, 187) ;
+}
+
+/* Projects Section */
+
+.projet-section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin:20vh 5vw 0 5vw;
+    /* border: 2px solid red; */
+}
+.project{
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 30vh;
+    padding: 0px;
+    gap: 10px;
+}
+.project-img{
+    flex: 10;
+    overflow: hidden;
+   /* border:2px solid red; */
+}
+.project-img img{
+   width: 120px;
+   height: 150px;
+}
+.project-description{
+    flex: 60;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.project-description ul:first-child{
+ text-decoration: none;
+}
+
+.footer_container{
+    display: flex;
+    margin: 5vh 5vw;
+    gap: 101px;
+}
+.footerItem{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+.item{
+    font-size: larger;
+    font-weight: 700;
+}
+.item:hover{
+    cursor: pointer;
+    color: rgb(176, 104, 243);
+}
+.item a{
+    text-decoration: none;
+    color: black;
+}
+.item a:hover{
+    cursor: pointer;
+    color: rgb(176, 104, 243);
+}
+.copyright{
+   
+
+    margin: 10vh 5vw;
+    font-size: large;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Download CV button */
+.button{
+    margin-top: 100px;
+    margin-left: 50px;
+    display: flex;
+    width: 250px;
+    height: 50px;
+    gap: 20px;
+
+}
+.btn{
+    height: 45px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}
+.download-btn{
+    width: 150px;
+   
+}
+.github-btn{
+    width: 80px;
+}
+.button a{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    font-weight: 400;
+}
+/* Contact Section */
+.Contact-sec{
+    padding: 5vh 5vw;
+}
+.contact-detail{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 20px;
+}
+.detail span{
+    margin-right: 5px;
+    font-size: 1rem;
+    font-weight: 900;
+}
+.SocialMedia-img{
+    width: 50px;
+    height: 50px;
+}
+.social-meadia-Account{
+    display: flex;
+    gap: 30px;
+}
